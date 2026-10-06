@@ -80,7 +80,7 @@ Deno.serve(async (req: Request) => {
       PartyA: normalizedPhone,
       PartyB: shortcode,
       PhoneNumber: normalizedPhone,
-      CallBackURL: `${Deno.env.get("SUPABASE_URL")}/functions/v1/mpesa-callback`,
+      CallBackURL: "https://ixmwkrpllkyhpofetzge.supabase.co/functions/v1/mpesa-callback",
       AccountReference: mode === "withdraw" ? `Withdraw-${accountNumber || "N/A"}` : "PolyPayDeposit",
       TransactionDesc: mode === "withdraw"
         ? `Withdrawal to ${accountName || phone}`
